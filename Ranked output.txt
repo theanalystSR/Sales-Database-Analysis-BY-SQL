@@ -1,0 +1,5 @@
+3. Ranked Products:
+product_name	total_sales	product_rank
+Laptop	5000	1
+Phone	2500	2
+Monitor	300	3

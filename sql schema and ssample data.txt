@@ -1,0 +1,49 @@
+SQL Schema and Sample Data
+
+-- Create the tables
+CREATE TABLE Products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    category VARCHAR(100)
+);
+
+CREATE TABLE Customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    region VARCHAR(100)
+);
+
+CREATE TABLE Sales (
+    sale_id INT PRIMARY KEY,
+    product_id INT,
+    customer_id INT,
+    sale_date DATE,
+    quantity INT,
+    price DECIMAL(10, 2),
+    FOREIGN KEY (product_id) REFERENCES Products(product_id),
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+
+-- Insert sample data
+INSERT INTO Products (product_id, product_name, category) VALUES 
+(1, 'Laptop', 'Electronics'),
+(2, 'Phone', 'Electronics'),
+(3, 'Tablet', 'Electronics'),
+(4, 'Headphones', 'Accessories'),
+(5, 'Monitor', 'Electronics');
+
+INSERT INTO Customers (customer_id, customer_name, region) VALUES
+(1, 'Alice', 'North'),
+(2, 'Bob', 'South'),
+(3, 'Charlie', 'West'),
+(4, 'Diana', 'East');
+
+INSERT INTO Sales (sale_id, product_id, customer_id, sale_date, quantity, price) VALUES
+(1, 1, 1, '2023-01-01', 2, 1000),
+(2, 2, 2, '2023-01-02', 3, 500),
+(3, 3, 3, '2023-01-03', 1, 800),
+(4, 1, 4, '2023-01-04', 1, 1000),
+(5, 2, 1, '2023-01-05', 2, 500),
+(6, 4, 2, '2023-01-06', 4, 150),
+(7, 5, 3, '2023-01-07', 1, 300),
+(8, 1, 4, '2023-01-08', 2, 1000);

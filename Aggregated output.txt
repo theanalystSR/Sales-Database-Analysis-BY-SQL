@@ -1,0 +1,5 @@
+2. Aggregated Data:
+product_name	total_quantity	total_sales
+Laptop	5	5000
+Phone	5	2500
+Monitor	1	300

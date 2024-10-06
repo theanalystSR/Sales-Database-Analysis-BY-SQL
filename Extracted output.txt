@@ -1,0 +1,6 @@
+Expected Output
+1. Extracted Data:
+sale_id	product_name	customer_name	sale_date	quantity	price
+1	Laptop	Alice	2023-01-01	2	1000
+2	Phone	Bob	2023-01-02	3	500
+3	Tablet	Charlie	2023-01-03	1	800
